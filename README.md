@@ -16,7 +16,7 @@
    - Extract the ChromeDriver in the current directory as python code and rename it to `chromedriver.exe`
 
 3. Install python dependencies - Open terminal in the current directory and enter the command below:<br/>
-   `pip install -r requirements.txt`
+   ```pip install -r requirements.txt```
 
 ### How to scrape
 
@@ -29,7 +29,7 @@
 - Go to [convertcsv.com](https://www.convertcsv.com/json-to-csv.htm) and upload `data.json` file and convert it to CSV and Excel formats
 
 
-## Data Pre-processing using Excel
+### Data Pre-processing using Excel
 
 1. Make sure you have enabled `Developers` tab on your Ms Excel
 
@@ -51,7 +51,7 @@
    - Now, you can visit the link in column `@url`
 
 
-## How to use GeoData in Google Maps (Longitude and Latitude)
+### How to use GeoData in Google Maps (Longitude and Latitude)
 
 You can either directly search the longitude and latitude in the map or just use the link below and change the placeholders of <latitude> and <longitude> with actual values:
 
@@ -59,18 +59,16 @@ You can either directly search the longitude and latitude in the map or just use
 https://www.google.com/maps?q=<latitude>,<longitude>
 ```
 
-Example: <strong>Hotel Darshan</strong> has Latitude= 15.271669 and Longitude=73.970421 , this is how its [link](https://www.google.com/maps?q=15.271669,73.970421) would look like:
-`https://www.google.com/maps?q=15.271669,73.970421`
+Example: <strong>Hotel Darshan</strong> has Latitude= 15.271669 and Longitude=73.970421 , this is how its [link](https://www.google.com/maps?q=15.271669,73.970421) would look like:<br/>
+```https://www.google.com/maps?q=15.271669,73.970421```
 
 ### Configure Chrome profile in python
 
 - Find the path to your profile. You can do that by typing `Chrome://version/` in Chrome and copying the profile path. The path should look like this:<br/>
-  `C:\Users\<User Name>\AppData\Local\BraveSoftware\Brave-Browser\User Data\Default`<br/>
+  ```C:\Users\<User Name>\AppData\Local\BraveSoftware\Brave-Browser\User Data\Default```
 - Remove Default, we don't need that directory
 - When initializinf selenium driver pass this as an argument to the options
 - This is how the code with a chrome profile would look like:
-  s
-
 ```python
 from selenium import webdriver
 options = webdriver.ChromeOptions()
