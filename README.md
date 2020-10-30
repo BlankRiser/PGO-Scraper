@@ -28,12 +28,8 @@
 - After completion, you can see a `data.json` in the same directory as `scraper.py`
 - Go to [convertcsv.com](https://www.convertcsv.com/json-to-csv.htm) and upload `data.json` file and convert it to CSV and Excel formats
 
-2. ## Configure Chrome profiles
 
-Using cookies
-https://stackoverflow.com/questions/48880646/python-selenium-use-a-browser-that-is-already-open-and-logged-in-with-login-cre
-
-##s Data Pre-processing using Excel
+## Data Pre-processing using Excel
 
 1. Make sure you have enabled `Developers` tab on your Ms Excel
 
@@ -53,6 +49,7 @@ https://stackoverflow.com/questions/48880646/python-selenium-use-a-browser-that-
    End Sub
    ```
    - Now, you can visit the link in column `@url`
+
 
 ## How to use GeoData in Google Maps (Longitude and Latitude)
 
