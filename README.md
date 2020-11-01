@@ -49,6 +49,19 @@
    End Sub
    ```
    - Now, you can visit the link in column `@url`
+   
+3. Formatting the GMaps link to be clickable from MS Excel
+   - Select the column that contains `GMaps` link and go to Developer's tab and click Visual Basic
+   - In menu bar, go to `Insert` and click `Module`
+   - Copy the code below and press `F5` to run this macro code 
+   ```
+   Sub HyperAdd()
+    'Converts each text hyperlink selected into a working hyperlink
+    For Each xCell In Selection
+        ActiveSheet.Hyperlinks.Add Anchor:=xCell, Address:=xCell.Formula
+    Next xCell
+   End Sub
+   ```
 
 
 ### How to use GeoData in Google Maps (Longitude and Latitude)
