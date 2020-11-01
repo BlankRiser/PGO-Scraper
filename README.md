@@ -75,6 +75,14 @@ https://www.google.com/maps?q=<latitude>,<longitude>
 Example: <strong>Hotel Darshan</strong> has Latitude= 15.271669 and Longitude=73.970421 , this is how its [link](https://www.google.com/maps?q=15.271669,73.970421) would look like:<br/>
 ```https://www.google.com/maps?q=15.271669,73.970421```
 
+## Geting the area from postal code
+API used: [postal pin-code](http://www.postalpincode.in/Api-Details/)
+The api query:
+```
+https://api.postalpincode.in/pincode/<pincode>
+https://api.postalpincode.in/pincode/560037
+```
+
 ### Configure Chrome profile in python
 
 - Find the path to your profile. You can do that by typing `Chrome://version/` in Chrome and copying the profile path. The path should look like this:<br/>
