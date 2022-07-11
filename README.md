@@ -1,9 +1,10 @@
 # PGO Scraper
 
-### Tools reqired
+## TODO
 
-- python 3.8+
-- Visual Studio Code
+- Build a frontend using Next.js, tailwindCSS, trpc, and Zustand
+- Use S3 storage with flask or fastAPI to develop an api
+- Create a map of the geo locations available using [leafletjs](https://leafletjs.com/download.html) and [turf.js](https://turfjs.org/)
 
 ### Prerequisites
 
@@ -16,7 +17,7 @@
    - Extract the ChromeDriver in the current directory as python code and rename it to `chromedriver.exe`
 
 3. Install python dependencies - Open terminal in the current directory and enter the command below:<br/>
-   ```pip install -r requirements.txt```
+   `pip install -r requirements.txt`
 
 ### How to scrape
 
@@ -27,7 +28,6 @@
 - Double click <strong>scraper.py</strong> file and wait for a while till you get the message: 'JSON Made!'
 - After completion, you can see a `data.json` in the same directory as `scraper.py`
 - Go to [convertcsv.com](https://www.convertcsv.com/json-to-csv.htm) and upload `data.json` file and convert it to CSV and Excel formats
-
 
 ### Data Pre-processing using Excel
 
@@ -49,11 +49,10 @@
    End Sub
    ```
    - Now, you can visit the link in column `@url`
-   
 3. Formatting the GMaps link to be clickable from MS Excel
    - Select the column that contains `GMaps` link and go to Developer's tab and click Visual Basic
    - In menu bar, go to `Insert` and click `Module`
-   - Copy the code below and press `F5` to run this macro code 
+   - Copy the code below and press `F5` to run this macro code
    ```
    Sub HyperAdd()
     'Converts each text hyperlink selected into a working hyperlink
@@ -62,7 +61,6 @@
     Next xCell
    End Sub
    ```
-
 
 ### How to use GeoData in Google Maps (Longitude and Latitude)
 
@@ -73,11 +71,13 @@ https://www.google.com/maps?q=<latitude>,<longitude>
 ```
 
 Example: <strong>Hotel Darshan</strong> has Latitude= 15.271669 and Longitude=73.970421 , this is how its [link](https://www.google.com/maps?q=15.271669,73.970421) would look like:<br/>
-```https://www.google.com/maps?q=15.271669,73.970421```
+`https://www.google.com/maps?q=15.271669,73.970421`
 
 ## Geting the area from postal code
+
 API used: [postal pin-code](http://www.postalpincode.in/Api-Details/)
 The api query:
+
 ```
 https://api.postalpincode.in/pincode/<pincode>
 https://api.postalpincode.in/pincode/560037
@@ -86,10 +86,11 @@ https://api.postalpincode.in/pincode/560037
 ### Configure Chrome profile in python
 
 - Find the path to your profile. You can do that by typing `Chrome://version/` in Chrome and copying the profile path. The path should look like this:<br/>
-  ```C:\Users\<User Name>\AppData\Local\BraveSoftware\Brave-Browser\User Data\Default```
+  `C:\Users\<User Name>\AppData\Local\BraveSoftware\Brave-Browser\User Data\Default`
 - Remove Default, we don't need that directory
 - When initializinf selenium driver pass this as an argument to the options
 - This is how the code with a chrome profile would look like:
+
 ```python
 from selenium import webdriver
 options = webdriver.ChromeOptions()
